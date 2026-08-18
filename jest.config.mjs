@@ -10,6 +10,7 @@ const config = {
   passWithNoTests: true,
   restoreMocks: true,
   testEnvironment: 'node',
+  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
   testMatch: ['**/*.spec.ts', '**/*.test.ts', '**/*.spec.js', '**/*.test.js'],
   transform: {
     '^.+\\.[cm]?tsx?$': [

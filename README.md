@@ -1,9 +1,25 @@
 # SeatFlow
 
 SeatFlow is a learning project for building an event-driven seat reservation platform with
-Node.js, TypeScript, NestJS, Java, and Spring Boot. This repository currently contains only the
-monorepo structure, shared development configuration, and continuous integration workflow; the
-application code will be implemented incrementally.
+Node.js, TypeScript, NestJS, Java, and Spring Boot. The platform will coordinate seat availability,
+reservations, payments, notifications, and analytics while the application code is implemented
+incrementally.
+
+## Business problem
+
+SeatFlow models the flow of reserving seats for an event in a distributed system. A client should
+be able to request seats, receive a consistent reservation result, and safely retry a request when
+the network or a downstream service fails. The system will later separate the reservation API from
+payment, notification, and analytics workers, so the domain rules must remain independent of those
+technical components.
+
+## Domain invariants
+
+The domain must preserve these rules regardless of which application or worker invokes it:
+
+- Available capacity can never be negative.
+- A confirmed reservation does not expire.
+- Repeating the same idempotent request does not create a second effect.
 
 ## Repository structure
 

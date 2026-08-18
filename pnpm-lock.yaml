@@ -10,6 +10,9 @@ importers:
       '@eslint/js':
         specifier: 10.0.1
         version: 10.0.1(eslint@10.8.1(supports-color@8.1.1))
+      '@jest/globals':
+        specifier: 30.4.1
+        version: 30.4.1(supports-color@8.1.1)
       '@swc/core':
         specifier: 1.16.0
         version: 1.16.0
@@ -43,6 +46,8 @@ importers:
       typescript-eslint:
         specifier: 8.67.0
         version: 8.67.0(eslint@10.8.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
+
+  packages/domain: {}
 
 packages:
   '@babel/code-frame@7.29.7':
