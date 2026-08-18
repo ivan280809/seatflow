@@ -55,15 +55,15 @@ Este dominio hace visibles problemas relevantes para un backend senior: contenci
 
 ### 3.2 Evolución arquitectónica deliberada
 
-| Etapa | Arquitectura | Razón de aprendizaje |
-|---|---|---|
-| 1 | Librería de dominio TypeScript | Aprender el lenguaje sin ocultarlo bajo un framework |
-| 2 | API HTTP mínima sobre Node.js | Comprender runtime, HTTP, errores, streams y ciclo de vida |
-| 3 | Monolito modular NestJS + PostgreSQL | Construir un backend mantenible sin distribución prematura |
-| 4 | Outbox + Kafka + workers Node.js | Añadir asincronía y entrega al menos una vez |
-| 5 | Proyección Java/Spring Boot | Probar interoperabilidad y evolución de contratos |
-| 6 | Extraer pago/notificaciones | Practicar fronteras y compensación donde existe una razón real |
-| 7 | AWS + observabilidad + carga | Completar operación, automatización y evidencia curricular |
+| Etapa | Arquitectura                         | Razón de aprendizaje                                           |
+| ----- | ------------------------------------ | -------------------------------------------------------------- |
+| 1     | Librería de dominio TypeScript       | Aprender el lenguaje sin ocultarlo bajo un framework           |
+| 2     | API HTTP mínima sobre Node.js        | Comprender runtime, HTTP, errores, streams y ciclo de vida     |
+| 3     | Monolito modular NestJS + PostgreSQL | Construir un backend mantenible sin distribución prematura     |
+| 4     | Outbox + Kafka + workers Node.js     | Añadir asincronía y entrega al menos una vez                   |
+| 5     | Proyección Java/Spring Boot          | Probar interoperabilidad y evolución de contratos              |
+| 6     | Extraer pago/notificaciones          | Practicar fronteras y compensación donde existe una razón real |
+| 7     | AWS + observabilidad + carga         | Completar operación, automatización y evidencia curricular     |
 
 ### 3.3 Arquitectura final orientativa
 
@@ -123,12 +123,12 @@ No se añadirá frontend, Kubernetes, GraphQL, MongoDB, RabbitMQ ni otro framewo
 
 ### Semana normal de 3 horas y 45 minutos
 
-| Bloque | Duración | Actividad |
-|---|---:|---|
-| A | 75 min | Curso guiado, resolviendo los ejercicios sin copiar la solución |
-| B | 90 min | Implementación en SeatFlow |
-| C | 45 min | Documentación oficial o lectura asignada |
-| D | 15 min | Recuperación activa: explicar sin apuntes, registrar dudas y siguiente paso |
+| Bloque | Duración | Actividad                                                                   |
+| ------ | -------: | --------------------------------------------------------------------------- |
+| A      |   75 min | Curso guiado, resolviendo los ejercicios sin copiar la solución             |
+| B      |   90 min | Implementación en SeatFlow                                                  |
+| C      |   45 min | Documentación oficial o lectura asignada                                    |
+| D      |   15 min | Recuperación activa: explicar sin apuntes, registrar dudas y siguiente paso |
 
 Si esa semana solo dispones de 3 horas, conserva íntegro el bloque de implementación y reduce lectura o vídeo. Cada cuarta semana, el bloque de curso se reemplaza por consolidación o un caso de liderazgo.
 
@@ -143,61 +143,61 @@ Para considerar dominado un concepto debes poder completar las cuatro acciones:
 
 ## 5. Mapa general de 72 semanas
 
-| Fase | Semanas | Horas estimadas | Resultado principal |
-|---|---:|---:|---|
-| 0. Preparación | 1–2 | 7 | Entorno, repositorio y baseline |
-| 1. JavaScript profundo | 3–10 | 28 | Modelo mental del lenguaje y asincronía |
-| 2. TypeScript profesional | 11–18 | 28 | Dominio tipado y estado exhaustivo |
-| 3. Plataforma Node.js | 19–28 | 35 | API sin depender todavía de NestJS |
-| 4. NestJS + PostgreSQL | 29–40 | 42 | Monolito modular transaccional y probado |
-| 5. Kafka y arquitectura dirigida por eventos | 41–50 | 35 | Outbox, consumidores idempotentes y contrato Node/Java |
-| 6. Sistemas distribuidos y fiabilidad | 51–60 | 35 | Sagas, SLO, observabilidad y experimentos de fallo |
-| 7. AWS, CI/CD y seguridad | 61–68 | 28 | Despliegue reproducible mediante Terraform |
-| 8. Endurecimiento y presentación curricular | 69–72 | 14 | Versión 1.0 medible y defendible |
-| **Total** | **72** | **252** | Proyecto público completo |
+| Fase                                         | Semanas | Horas estimadas | Resultado principal                                    |
+| -------------------------------------------- | ------: | --------------: | ------------------------------------------------------ |
+| 0. Preparación                               |     1–2 |               7 | Entorno, repositorio y baseline                        |
+| 1. JavaScript profundo                       |    3–10 |              28 | Modelo mental del lenguaje y asincronía                |
+| 2. TypeScript profesional                    |   11–18 |              28 | Dominio tipado y estado exhaustivo                     |
+| 3. Plataforma Node.js                        |   19–28 |              35 | API sin depender todavía de NestJS                     |
+| 4. NestJS + PostgreSQL                       |   29–40 |              42 | Monolito modular transaccional y probado               |
+| 5. Kafka y arquitectura dirigida por eventos |   41–50 |              35 | Outbox, consumidores idempotentes y contrato Node/Java |
+| 6. Sistemas distribuidos y fiabilidad        |   51–60 |              35 | Sagas, SLO, observabilidad y experimentos de fallo     |
+| 7. AWS, CI/CD y seguridad                    |   61–68 |              28 | Despliegue reproducible mediante Terraform             |
+| 8. Endurecimiento y presentación curricular  |   69–72 |              14 | Versión 1.0 medible y defendible                       |
+| **Total**                                    |  **72** |         **252** | Proyecto público completo                              |
 
 ## 6. Plan quincenal completo
 
 Cada fila representa aproximadamente siete horas. Las fechas se calculan desde la semana real de inicio.
 
-| Semanas | Estudio | Trabajo en el proyecto | Comprobación |
-|---|---|---|---|
-| 1–2 | Node LTS, npm/pnpm, ESM, Git, TypeScript tooling | Crear repositorio, CI mínima y esqueleto de paquetes | Instalación reproducible y primer pipeline verde |
-| 3–4 | Valores, funciones, scopes y execution contexts | Katas de dominio sin clases ni framework | Explicar stack, heap, scope y coerción |
-| 5–6 | Higher-order functions, closures, objetos y prototipos | Repositorio en memoria y reglas de reserva | Implementar una closure útil y explicar prototipos |
-| 7–8 | Call stack, callbacks, promises, tasks y microtasks | Simulador de expiraciones y concurrencia asíncrona | Predecir el orden de ejecución antes de correr el código |
-| 9–10 | `async/await`, propagación de errores, ESM y limpieza | Miniaplicación CLI de reservas | Sin promesas huérfanas; pruebas del flujo completo |
-| 11–12 | Inferencia, tipos estructurales, uniones e interfaces | Migrar el dominio a TypeScript estricto | Compilación con configuración estricta |
-| 13–14 | Narrowing, discriminated unions, `never`, genéricos | Máquina de estados de Reservation | Transiciones ilegales imposibles o rechazadas en el límite |
-| 15–16 | Utility, mapped y conditional types; branded IDs | Tipar IDs, comandos, eventos y resultados | Sin confundir IDs de dominios distintos |
-| 17–18 | ESM/CJS, `tsconfig`, tipos externos y validación runtime | Validar comandos/eventos con Zod o equivalente | Diferenciar claramente tipo estático y dato no confiable |
-| 19–20 | Runtime Node, módulos, `process`, npm, filesystem | CLI y configuración real | Shutdown y errores de proceso controlados |
-| 21–22 | Event loop, libuv, timers, `AbortController`, `AsyncLocalStorage` | Deadlines, cancelación y correlation ID | Demostrar un bloqueo del event loop y corregirlo |
-| 23–24 | Streams, backpressure, EventEmitter y worker threads | Importador de sesiones en streaming | Memoria estable con fichero grande; CPU-bound fuera del loop |
-| 25–26 | HTTP nativo y Express; REST, errores y validación | Primera API HTTP de SeatFlow | Contrato OpenAPI inicial y errores consistentes |
-| 27–28 | Pool PostgreSQL, logging, perfiles y pruebas Node | Persistencia sencilla y graceful shutdown | Prueba e2e y perfil de una ruta lenta |
-| 29–30 | Nest: módulos, providers, controllers y DI | Migrar API al monolito modular NestJS | Límites de módulo visibles; dominio no depende de Nest |
-| 31–32 | Pipes, guards, filters, interceptors, config y OpenAPI | Validación, auth mínima y error model | Entradas no válidas rechazadas y documentadas |
-| 33–34 | PostgreSQL, TypeORM, migraciones, índices y planes | Modelo de eventos, sesiones, reservas y outbox vacío | Base recreable solo con migraciones |
-| 35–36 | Aislamiento, locks, atomic updates y contención | Reserva sin overselling bajo concurrencia | Prueba concurrente repetible con invariantes |
-| 37–38 | Idempotency keys, expiración y `SKIP LOCKED` | Confirmar, cancelar y expirar reservas | Repetir peticiones no duplica efectos |
-| 39–40 | Unit, integration, e2e, Testcontainers y k6 | Suite completa y primer perfil de carga | Hito v0.4: API estable, testeada y medible |
-| 41–42 | Kafka: log, topics, partitions, groups, offsets y entrega | Entorno local Kafka/Schema Registry | Explicar orden, rebalances y límites de paralelismo |
-| 43–44 | KafkaJS/Nest, producer/consumer, claves y commits | Publicación y consumo básico | Selección de key justificada y lag observable |
-| 45–46 | Transactional outbox, inbox, retries, DLQ | Relay de outbox y consumer idempotente | Caídas entre DB/Kafka no pierden el evento lógico |
-| 47–48 | Avro, compatibilidad y evolución de esquema | Contratos y proyección Java/Spring Boot | Node y Java intercambian dos versiones compatibles |
-| 49–50 | Backpressure, lag, poison messages y particiones calientes | Pruebas de fallo y recuperación del consumidor | Hito v0.6: reinicio seguro y replay documentado |
-| 51–52 | NFR, estimación de carga, CAP y consistencia | Definir SLO y modelo de carga | Requisitos cuantificados, no adjetivos vagos |
-| 53–54 | Cohesión, acoplamiento y fronteras de servicio | Decidir qué extraer y qué mantener junto | Decisión defendida frente a dos alternativas |
-| 55–56 | Saga, compensación y timeouts | Servicio de pago simulado y checkout distribuido | Cada fallo parcial termina en un estado explicable |
-| 57–58 | Timeout, retry, jitter, circuit breaker y bulkhead | Políticas distintas por dependencia | Evitar tormentas de reintentos en una prueba inducida |
-| 59–60 | OpenTelemetry, SLI/SLO, trazas Kafka y caos | Trazas Node→Kafka→Java y fallo con Toxiproxy | Hito v0.8: localizar una degradación usando telemetría |
-| 61–62 | Docker seguro, CI, supply chain y GitHub Actions | Imágenes multistage, SBOM/scan y pipeline completo | Build reproducible sin secretos embebidos |
-| 63–64 | Terraform, IAM y AWS App Runner/ECS | Infraestructura inicial y entorno efímero | Crear y destruir el entorno desde código |
-| 65–66 | RDS, red, secretos, OIDC y Kafka administrado | Persistencia, despliegue y migraciones | Despliegue desde CI sin credenciales AWS duraderas |
-| 67–68 | Coste, escalado, rollback y prueba remota | Ejecutar smoke/load test y destruir recursos caros | Hito v0.9: informe con coste y límites observados |
-| 69–70 | OWASP API/Node, profiling y revisión arquitectónica | Hardening, índices, dependencias y deuda crítica | Sin vulnerabilidades altas conocidas ni regresión medible |
-| 71–72 | Síntesis y explicación técnica | README, diagramas mínimos, demo reproducible y tag v1.0 | Un tercero puede levantar, probar y entender el sistema |
+| Semanas | Estudio                                                           | Trabajo en el proyecto                                  | Comprobación                                                 |
+| ------- | ----------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ |
+| 1–2     | Node LTS, npm/pnpm, ESM, Git, TypeScript tooling                  | Crear repositorio, CI mínima y esqueleto de paquetes    | Instalación reproducible y primer pipeline verde             |
+| 3–4     | Valores, funciones, scopes y execution contexts                   | Katas de dominio sin clases ni framework                | Explicar stack, heap, scope y coerción                       |
+| 5–6     | Higher-order functions, closures, objetos y prototipos            | Repositorio en memoria y reglas de reserva              | Implementar una closure útil y explicar prototipos           |
+| 7–8     | Call stack, callbacks, promises, tasks y microtasks               | Simulador de expiraciones y concurrencia asíncrona      | Predecir el orden de ejecución antes de correr el código     |
+| 9–10    | `async/await`, propagación de errores, ESM y limpieza             | Miniaplicación CLI de reservas                          | Sin promesas huérfanas; pruebas del flujo completo           |
+| 11–12   | Inferencia, tipos estructurales, uniones e interfaces             | Migrar el dominio a TypeScript estricto                 | Compilación con configuración estricta                       |
+| 13–14   | Narrowing, discriminated unions, `never`, genéricos               | Máquina de estados de Reservation                       | Transiciones ilegales imposibles o rechazadas en el límite   |
+| 15–16   | Utility, mapped y conditional types; branded IDs                  | Tipar IDs, comandos, eventos y resultados               | Sin confundir IDs de dominios distintos                      |
+| 17–18   | ESM/CJS, `tsconfig`, tipos externos y validación runtime          | Validar comandos/eventos con Zod o equivalente          | Diferenciar claramente tipo estático y dato no confiable     |
+| 19–20   | Runtime Node, módulos, `process`, npm, filesystem                 | CLI y configuración real                                | Shutdown y errores de proceso controlados                    |
+| 21–22   | Event loop, libuv, timers, `AbortController`, `AsyncLocalStorage` | Deadlines, cancelación y correlation ID                 | Demostrar un bloqueo del event loop y corregirlo             |
+| 23–24   | Streams, backpressure, EventEmitter y worker threads              | Importador de sesiones en streaming                     | Memoria estable con fichero grande; CPU-bound fuera del loop |
+| 25–26   | HTTP nativo y Express; REST, errores y validación                 | Primera API HTTP de SeatFlow                            | Contrato OpenAPI inicial y errores consistentes              |
+| 27–28   | Pool PostgreSQL, logging, perfiles y pruebas Node                 | Persistencia sencilla y graceful shutdown               | Prueba e2e y perfil de una ruta lenta                        |
+| 29–30   | Nest: módulos, providers, controllers y DI                        | Migrar API al monolito modular NestJS                   | Límites de módulo visibles; dominio no depende de Nest       |
+| 31–32   | Pipes, guards, filters, interceptors, config y OpenAPI            | Validación, auth mínima y error model                   | Entradas no válidas rechazadas y documentadas                |
+| 33–34   | PostgreSQL, TypeORM, migraciones, índices y planes                | Modelo de eventos, sesiones, reservas y outbox vacío    | Base recreable solo con migraciones                          |
+| 35–36   | Aislamiento, locks, atomic updates y contención                   | Reserva sin overselling bajo concurrencia               | Prueba concurrente repetible con invariantes                 |
+| 37–38   | Idempotency keys, expiración y `SKIP LOCKED`                      | Confirmar, cancelar y expirar reservas                  | Repetir peticiones no duplica efectos                        |
+| 39–40   | Unit, integration, e2e, Testcontainers y k6                       | Suite completa y primer perfil de carga                 | Hito v0.4: API estable, testeada y medible                   |
+| 41–42   | Kafka: log, topics, partitions, groups, offsets y entrega         | Entorno local Kafka/Schema Registry                     | Explicar orden, rebalances y límites de paralelismo          |
+| 43–44   | KafkaJS/Nest, producer/consumer, claves y commits                 | Publicación y consumo básico                            | Selección de key justificada y lag observable                |
+| 45–46   | Transactional outbox, inbox, retries, DLQ                         | Relay de outbox y consumer idempotente                  | Caídas entre DB/Kafka no pierden el evento lógico            |
+| 47–48   | Avro, compatibilidad y evolución de esquema                       | Contratos y proyección Java/Spring Boot                 | Node y Java intercambian dos versiones compatibles           |
+| 49–50   | Backpressure, lag, poison messages y particiones calientes        | Pruebas de fallo y recuperación del consumidor          | Hito v0.6: reinicio seguro y replay documentado              |
+| 51–52   | NFR, estimación de carga, CAP y consistencia                      | Definir SLO y modelo de carga                           | Requisitos cuantificados, no adjetivos vagos                 |
+| 53–54   | Cohesión, acoplamiento y fronteras de servicio                    | Decidir qué extraer y qué mantener junto                | Decisión defendida frente a dos alternativas                 |
+| 55–56   | Saga, compensación y timeouts                                     | Servicio de pago simulado y checkout distribuido        | Cada fallo parcial termina en un estado explicable           |
+| 57–58   | Timeout, retry, jitter, circuit breaker y bulkhead                | Políticas distintas por dependencia                     | Evitar tormentas de reintentos en una prueba inducida        |
+| 59–60   | OpenTelemetry, SLI/SLO, trazas Kafka y caos                       | Trazas Node→Kafka→Java y fallo con Toxiproxy            | Hito v0.8: localizar una degradación usando telemetría       |
+| 61–62   | Docker seguro, CI, supply chain y GitHub Actions                  | Imágenes multistage, SBOM/scan y pipeline completo      | Build reproducible sin secretos embebidos                    |
+| 63–64   | Terraform, IAM y AWS App Runner/ECS                               | Infraestructura inicial y entorno efímero               | Crear y destruir el entorno desde código                     |
+| 65–66   | RDS, red, secretos, OIDC y Kafka administrado                     | Persistencia, despliegue y migraciones                  | Despliegue desde CI sin credenciales AWS duraderas           |
+| 67–68   | Coste, escalado, rollback y prueba remota                         | Ejecutar smoke/load test y destruir recursos caros      | Hito v0.9: informe con coste y límites observados            |
+| 69–70   | OWASP API/Node, profiling y revisión arquitectónica               | Hardening, índices, dependencias y deuda crítica        | Sin vulnerabilidades altas conocidas ni regresión medible    |
+| 71–72   | Síntesis y explicación técnica                                    | README, diagramas mínimos, demo reproducible y tag v1.0 | Un tercero puede levantar, probar y entender el sistema      |
 
 ## 7. Detalle por fases y recursos
 
@@ -473,31 +473,31 @@ Como se ha elegido teoría y análisis de casos, no se simulará gestión de per
 
 ### Casos
 
-| Semana aproximada | Caso |
-|---:|---|
-| 4 | Proponer Node.js en una organización dominada por Java sin crear dos plataformas innecesarias |
-| 10 | Establecer estándares TypeScript sin trasladar mecánicamente las convenciones Java |
-| 16 | Resolver una discusión `any`/velocidad frente a `unknown`/validación |
-| 22 | Incidente causado por una operación CPU-bound que bloquea el event loop |
-| 28 | Decidir si adoptar NestJS o mantener un framework ligero |
-| 34 | Priorizar una corrección de consistencia frente a una fecha de entrega |
-| 40 | Rechazar una división prematura en microservicios con argumentos verificables |
-| 46 | Definir propiedad y compatibilidad de un contrato Kafka compartido por varios equipos |
-| 52 | Diseñar respuesta a un hot partition durante una apertura de venta |
-| 58 | Decidir entre saga, transacción local y coordinación síncrona |
-| 64 | Negociar coste, fiabilidad y velocidad de entrega en AWS |
-| 70 | Postmortem sin culpa y roadmap de reducción de riesgo para SeatFlow |
+| Semana aproximada | Caso                                                                                          |
+| ----------------: | --------------------------------------------------------------------------------------------- |
+|                 4 | Proponer Node.js en una organización dominada por Java sin crear dos plataformas innecesarias |
+|                10 | Establecer estándares TypeScript sin trasladar mecánicamente las convenciones Java            |
+|                16 | Resolver una discusión `any`/velocidad frente a `unknown`/validación                          |
+|                22 | Incidente causado por una operación CPU-bound que bloquea el event loop                       |
+|                28 | Decidir si adoptar NestJS o mantener un framework ligero                                      |
+|                34 | Priorizar una corrección de consistencia frente a una fecha de entrega                        |
+|                40 | Rechazar una división prematura en microservicios con argumentos verificables                 |
+|                46 | Definir propiedad y compatibilidad de un contrato Kafka compartido por varios equipos         |
+|                52 | Diseñar respuesta a un hot partition durante una apertura de venta                            |
+|                58 | Decidir entre saga, transacción local y coordinación síncrona                                 |
+|                64 | Negociar coste, fiabilidad y velocidad de entrega en AWS                                      |
+|                70 | Postmortem sin culpa y roadmap de reducción de riesgo para SeatFlow                           |
 
 ## 9. Evaluación y puertas de avance
 
 Al final de cada fase, puntúa de 0 a 2 cada dimensión:
 
-| Dimensión | 0 | 1 | 2 |
-|---|---|---|---|
-| Explicación | No puede explicarse | Explicación con lagunas | Explicación clara y causal |
-| Implementación | Depende del tutorial | Requiere consultas frecuentes | Se implementa desde un requisito |
-| Fallos y pruebas | Solo happy path | Algunos casos límite | Fallos inducidos y recuperación |
-| Trade-offs | Elección por preferencia | Compara superficialmente | Defiende alternativas, costes y reversión |
+| Dimensión        | 0                        | 1                             | 2                                         |
+| ---------------- | ------------------------ | ----------------------------- | ----------------------------------------- |
+| Explicación      | No puede explicarse      | Explicación con lagunas       | Explicación clara y causal                |
+| Implementación   | Depende del tutorial     | Requiere consultas frecuentes | Se implementa desde un requisito          |
+| Fallos y pruebas | Solo happy path          | Algunos casos límite          | Fallos inducidos y recuperación           |
+| Trade-offs       | Elección por preferencia | Compara superficialmente      | Defiende alternativas, costes y reversión |
 
 [Inferencia] Conviene obtener al menos **7/8** antes de pasar. Si no se alcanza, añadir una quincena de consolidación; no volver a consumir el mismo curso completo.
 
