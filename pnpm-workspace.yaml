@@ -1,0 +1,9 @@
+packages:
+  - apps/reservation-api
+  - apps/payment-worker
+  - apps/notification-worker
+  - packages/*
+
+allowBuilds:
+  '@swc/core@1.16.0': true
+  'unrs-resolver@1.12.2': true

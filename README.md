@@ -27,23 +27,23 @@ seatflow/
 └── .github/workflows/
 ```
 
-The npm workspace includes the three Node.js applications and all shared packages. The Java
-analytics projection is intentionally kept outside npm workspaces.
+The pnpm workspace includes the three Node.js applications and all shared packages. The Java
+analytics projection is intentionally kept outside pnpm workspaces.
 
 ## Requirements
 
 - Node.js 24
-- npm 11 or newer
+- pnpm 11
 - Java version to be selected when `analytics-projection` is created
 
 ## Quality commands
 
 ```bash
-npm run format
-npm run lint
-npm run typecheck
-npm test
-npm run build
+pnpm format
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm build
 ```
 
 The root scripts define the CI contract for formatting, linting, type checking, tests, and builds.
@@ -56,7 +56,8 @@ registered as project references in `tsconfig.json`.
 git clone https://github.com/ivan280809/seatflow.git
 cd seatflow
 nvm use
-npm ci
+corepack enable
+pnpm install --frozen-lockfile
 git switch -c feature/first-slice
 idea .
 ```
