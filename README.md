@@ -58,6 +58,9 @@ cd seatflow
 nvm use
 npm ci
 git switch -c feature/first-slice
+idea .
 ```
 
 If Node.js 24 is not installed through NVM, run `nvm install 24` before `nvm use`.
+
+On Windows, if `idea` is not recognized, add IntelliJ IDEA's `bin` directory to `PATH` and use `idea64.exe .`.
