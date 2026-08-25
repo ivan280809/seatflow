@@ -1,4 +1,4 @@
-import { ReservationStatus, type ReservationStatusValue } from './reservation-status.js';
+import { ReservationStatus, ReservationStatusValue } from './reservation-status.js';
 
 export class Reservation {
   readonly id: number;
@@ -26,5 +26,9 @@ export class Reservation {
 
   expire(): void {
     this.status.expire();
+  }
+
+  isPending(): boolean {
+    return this.status.status === ReservationStatusValue.Pending;
   }
 }
