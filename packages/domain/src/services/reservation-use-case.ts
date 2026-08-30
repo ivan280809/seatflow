@@ -51,6 +51,16 @@ export class ReservationUseCase {
     this.repository.update(reservation);
   }
 
+  expirePendingReservations(currentTime: Date): void {
+    this.repository.findAll().forEach((reservation) => {
+      if (reservation.isPending() && reservation.getExpirationTime() <= currentTime) {
+        this.capacity.release(reservation.seats);
+        reservation.expire();
+        this.repository.update(reservation);
+      }
+    });
+  }
+
   private getReservationOrThrow(reservationId: number): Reservation {
     const reservation = this.repository.findById(reservationId);
 

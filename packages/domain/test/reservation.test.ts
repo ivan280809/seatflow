@@ -1,5 +1,9 @@
-import { describe, expect, test } from '@jest/globals';
+import { afterEach, describe, expect, jest, test } from '@jest/globals';
 import { Reservation, ReservationStatusValue } from '../src/index.js';
+
+afterEach(() => {
+  jest.useRealTimers();
+});
 
 describe('Reservation', () => {
   test('starts as pending', () => {
@@ -46,5 +50,35 @@ describe('Reservation', () => {
     const reservation = new Reservation(1, 2);
 
     expect(Object.isFrozen(reservation)).toBe(true);
+  });
+
+  test('stores its creation time', () => {
+    const createdAt = new Date('2026-08-31T10:00:00.000Z');
+    jest.useFakeTimers().setSystemTime(createdAt);
+
+    const reservation = new Reservation(1, 2);
+
+    expect(reservation.createdAt).toEqual(createdAt);
+  });
+
+  test('expires eight minutes after creation', () => {
+    const createdAt = new Date('2026-08-31T10:00:00.000Z');
+    jest.useFakeTimers().setSystemTime(createdAt);
+
+    const reservation = new Reservation(1, 2);
+
+    expect(reservation.getExpirationTime()).toEqual(new Date('2026-08-31T10:08:00.000Z'));
+  });
+
+  test('updates its modification time after a valid transition', () => {
+    const createdAt = new Date('2026-08-31T10:00:00.000Z');
+    const updatedAt = new Date('2026-08-31T10:01:00.000Z');
+    jest.useFakeTimers().setSystemTime(createdAt);
+    const reservation = new Reservation(1, 2);
+
+    jest.setSystemTime(updatedAt);
+    reservation.confirm();
+
+    expect(reservation.getUpdatedAt()).toEqual(updatedAt);
   });
 });
