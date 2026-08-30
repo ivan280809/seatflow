@@ -66,6 +66,18 @@ The root scripts define the CI contract for formatting, linting, type checking, 
 As applications are created, their TypeScript configurations can extend `tsconfig.base.json` and be
 registered as project references in `tsconfig.json`.
 
+## Current domain slice
+
+The `packages/domain` package currently contains the first reservation slice:
+
+- `EventCapacity` enforces available-seat invariants.
+- `Reservation` models the pending, confirmed, cancelled, and expired states.
+- `ReservationUseCase` coordinates reservations through injected repository and capacity dependencies.
+- `startExpirationCron` provides a stoppable in-process scheduler for expiring pending reservations.
+- Jest tests cover the domain rules, use case, and scheduler behavior.
+
+The next planned step is a native Node.js CLI that invokes the use case through asynchronous commands.
+
 ## Start working
 
 ```bash
